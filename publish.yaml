@@ -3,7 +3,7 @@ Type: Application
 Name: fc-stable-diffusion-api
 Provider:
   - 阿里云
-Version: dev
+Version: 0.0.1
 Description: 使用serverless devs将stable-diffusion的api部署到阿里云函数计算上,支持模型自定义
 HomePage: 项目首页地址
 Tags: #标签详情
@@ -29,9 +29,10 @@ Parameters:
         - cn-shanghai
         - cn-shenzhen
     serviceName:
-      title: stable-diffusion指定的服务名，可以指定已有的服务名，共享nas存储
+      title: stable-diffusion指定的服务名
       type: string
       default: 'fc-stable-diffusion-plus'
+      description: 可以指定已有的服务名，共享nas存储
       pattern: "^[a-zA-Z_][a-zA-Z0-9-_:/.]{0,127}$"
     functionName:
       title: stable-diffusion api的函数名
